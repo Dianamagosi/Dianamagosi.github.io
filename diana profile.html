@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body style="background-color:powderblue;">
+    <header>
+        <img src="" class="profile-img">
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="file">
+        <section id="hero">
+            <div class="section-inner" >
+
+                <h1 align="center">Hie I am Tadiwanashe Diana Magosi</h1>
+                <h2 align="center">I am a Web Developer</h2>
+                <p>I have high creative potentials and able to work in various working environments
+                <p>I'm confident and have the required skills and knowledge needed in Web developments</p>
+                </p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="section-inner">
+                <h2>About me</h2>
+                <p>My ambitions are to complete a system design and lead a team, also increase my professional network
+                <p>I have skills in front end coding,Git ,Program Framework and Testing and debbuging</p>
+
+                </p>
+                <h3>Achievements</h3>
+                <ul>
+
+
+                    <table>
+                        <tr>
+                            <th>Educational Qualifications</th>
+                            <th>Year of study</th>
+
+                        </tr>
+                        <tr>
+                            <td>12 O Levels ZIMSEC</td>
+                            <td>2019</td>
+
+                        </tr>
+                        <tr>
+                            <td>3 A Level subjects ZIMSEC</td>
+                            <td>2021</td>
+
+                        </tr>
+                        <tr>
+                            <td>Bachelor of Technology Degree in Information Security and Assurance</td>
+                            <td>2022-2025</td>
+
+                        </tr>
+
+
+                    </table>
+
+
+                </ul>
+                <h4 style="background-color:tomato;">Additional certificates attained</h4>
+                <li> Certified Information Systems Security Professional (CISSP) </li>
+                <li> Certified Information Systems Auditor (CISA)</li>
+                <li> Certified Ethical Hacker (CEH)</li>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="section-inner">
+                <h2>Contact me</h2>
+                <p>You can find me on:</p>
+                <ul>
+                    <li><a href="https://twitter.com/diana">Twitter</a></li>
+                    <li><a href="https://www.reddit.com/user/diana">Reddit</a></li>
+                    <li><a href="https://www.instagram.com/diana/">Instagram</a></li>
+                </ul>
+                <p>Or, you can <a href="tadiwamagosi@gmail.com">send me an email</a>.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+<button class="btn" id="download">Download As PDF</button>
+<script>
+    const button = document.getElementById('download');
+
+    function generatePDF() {
+
+        const element = document.getElementById('file');
+
+        html2pdf().from(element).save();
+    }
+
+    button.addEventListener('click', generatePDF);
+</script>
+
+</html>
